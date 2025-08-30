@@ -59,7 +59,7 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    "https://test-frontend-tau-eight.vercel.app",
+    "test-frontend-zeta-orpin.vercel.app",
 ]
 
 CORS_ALLOW_HEADERS = [
