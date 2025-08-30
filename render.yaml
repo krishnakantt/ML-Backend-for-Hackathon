@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: ml-backend-for-hackathon
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn mlbackend.wsgi:application --log-file -
+    envVars:
+      - key: DJANGO_SECRET_KEY
+        generateValue: true
+      - key: DEBUG
+        value: "False"

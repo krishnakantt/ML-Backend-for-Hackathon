@@ -1,0 +1,15 @@
+Django==5.2.5
+djangorestframework==3.16.1
+django-cors-headers==4.7.0
+gunicorn
+whitenoise
+psycopg2-binary==2.9.10
+asgiref==3.9.1
+sqlparse==0.5.3
+tzdata==2025.2
+joblib==1.5.1
+numpy==1.26.4
+scikit-learn==1.7.1
+requests
+pillow
+
