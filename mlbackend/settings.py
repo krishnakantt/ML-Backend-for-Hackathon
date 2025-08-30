@@ -58,7 +58,9 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_ALL_ORIGINS = [
+    "https://test-frontend-tau-eight.vercel.app",
+]
 
 CORS_ALLOW_HEADERS = [
     "content-type",
