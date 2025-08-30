@@ -57,9 +57,10 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+CORS_ALLOWED_METHODS = True 
 
 CORS_ALLOWED_ORIGINS = [
-    "test-frontend-zeta-orpin.vercel.app",
+    "https://test-frontend-zeta-orpin.vercel.app",
 ]
 
 CORS_ALLOW_HEADERS = [
@@ -71,6 +72,7 @@ CORS_ALLOW_HEADERS = [
     "x-csrftoken",
     "x-requested-with",
 ]
+CSRF_TRUSTED_ORIGINS = ["https://test-frontend-zeta-orpin.vercel.app"]
 
 ROOT_URLCONF = 'mlbackend.urls'
 
