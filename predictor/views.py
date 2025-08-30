@@ -1,17 +1,20 @@
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from .ml_model import model, customer_type_map, product_name_map
+from .ml_model import get_pipeline 
 import numpy as np
 
 @api_view(["POST"])
 def predictor(request):
+    # Load model and mappings lazily
+    model, customer_type_map, product_name_map = get_pipeline()
+    
     if model is None:
         return Response({"error": "ML model is not loaded"}, status=500)
     
     try:
         data = request.data
 
-        features = np.array([[
+        features = np.array([[ 
             float(data.get("Unit_Cost", 0)),
             int(data.get("Order_Quantity", 0)),
             float(data.get("Unit_Sale_Price", 0)),
